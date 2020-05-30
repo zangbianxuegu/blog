@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Hero(props) {
   return (
-    <div className={`relative tc ${props.backgroundClass}`}>
+    <div className={`relative tc header-bg ${props.backgroundClass}`}>
       <div className="mw7 center white pv4">
         <div className="pv4">
           <h1 className="f1 normal lh-title ma0 pa0">

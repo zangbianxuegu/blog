@@ -1,11 +1,11 @@
-export function makeUrl(article) {
-  return `${article.dir.split('content').join('')}/${article.base.split('.json').join('')}`
+export function makeUrl(article) {  
+  return `/blog${article.dir.split('content').join('')}/${article.base.split('.json').join('')}`
 }
 
 export function filterPosts(summaryJson) {
   return summaryJson && summaryJson.fileMap && Object.keys(summaryJson.fileMap)
     .filter((file) => {
-      if (file.indexOf('content/posts') === 0) {
+      if (file.indexOf('content') === 0) {
         return true
       }
     }).map((file) => {

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Header from './Header'
 import Hero from './Hero'
 import Footer from './Footer'
-import Tracking from './Tracking'
 
 function Page(props) {
   return (
@@ -24,9 +23,6 @@ function Page(props) {
         {props.body}
 
         <Footer copyright={props.copyright} />
-        {props.siteId && (
-          <Tracking siteId={props.siteId} />
-        )}
       </main>
     </div>
   )

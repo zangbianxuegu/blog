@@ -12,7 +12,7 @@
     "build:content:watch": "processmd content/**/*.md --outputDir content --preview 110 --summaryOutput content/summary.json --watch",
     "build:export": "npm run build && npm run export",
     "export": "next export && cp -R static/* out/",
-    "deploy": "npm run build:content && npm run build:export && mv out public",
+    "deploy": "bash deploy.sh",
     "server": "NODE_ENV=production node server.js",
     "v-patch": "npm version patch && git push --tags && npm publish && git push",
     "v-minor": "npm version minor && git push --tags && npm publish && git push",

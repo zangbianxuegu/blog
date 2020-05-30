@@ -1,0 +1,8 @@
+.header-bg {
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(https://img1.doubanio.com/view/photo/raw/public/p2448585957.jpg);
+}

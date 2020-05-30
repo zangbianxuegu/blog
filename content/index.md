@@ -7,6 +7,7 @@ siteTitle: 'zangbianxuegu'
 description: ''
 stylesheets:
   - 'https://unpkg.com/tachyons@4.7.4/css/tachyons.min.css'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
   - 'static/css/common.css'
 topLinks:
   - text: 'Blog'

@@ -12,28 +12,6 @@ function Index(props) {
 
   return (
     <div>
-      <style jsx global>{`
-        .content a {
-          color: #0365A5;
-          text-decoration: none;
-          border-bottom: 1px solid #DFDFDF;
-          transition: all 300ms ease;
-        }
-
-        a:hover, a:focus {
-          border-bottom-color: currentColor;
-        }
-
-        code {
-          background-color: #EEE;
-          line-height: 1;
-          border-radius:2px;
-          padding: 1px;
-        }
-        code:not(.hljs) {
-          border: 1px solid #DDD;
-        }
-      `}</style>
       <Page
         siteTitle={`${CONFIG.siteTitle} - ${pageJson && pageJson.title}`}
         heroTitle={CONFIG.siteTitle}
@@ -52,7 +30,7 @@ function Index(props) {
 function Body(props = {}) {
   return (
     <div className="content center mw8 pa3 pa4-ns">
-      <h1 className="mt0 lh-title">{props.title}</h1>
+      <h1 className="mt0 lh-title title">{props.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: props.bodyHtml }}></div>
     </div>
   )

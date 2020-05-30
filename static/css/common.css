@@ -1,3 +1,17 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
+  color: #111;
+  font: 18px Helvetica, Arial, sans-serif;
+  line-height: 1.62;
+}
 .header-bg {
   width: 100%;
   min-height: 400px;
@@ -5,4 +19,93 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(https://img1.doubanio.com/view/photo/raw/public/p2448585957.jpg);
+}
+.content {
+  max-width: 750px;
+  padding: 3rem 1rem;
+  margin: 0 auto;
+}
+.title {
+  line-height: 5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #111;
+  font-weight: 600;
+}
+h1 {
+  font-size: 1.75em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1.1em;
+}
+p {
+  margin: 0 0 20px 0;
+  line-height: 1.8;
+  font-size: 1em;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+a {
+  text-decoration: none;
+  color: #5e58ae;
+  background-color: transparent;
+  touch-action: manipulation;
+}
+pre {
+  font-size: 1em;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 19px;
+  border-radius: 3px;
+  background: rgb(244, 245, 246) !important;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #383a42;
+}
+code {
+  font-family: monospace;
+  line-height: 1.5;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  background: rgb(244, 245, 246) !important;
+  font-size: 1.1rem;
+  color: rgb(52, 50, 64);
+  word-break: break-all;
+  white-space: pre-wrap;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+blockquote {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 2em;
+  line-height: 1.8;
+  font-size: 1em;
+  color: #7b7b7b;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url(https://img3.doubanio.com/f/sns/4e05379b65eac9cbef392f0343a6494c18db06ae/pics/sns/note/editor_icons/svg_blockquote1.svg);
+}
+li {
+  list-style: none;
+  list-style-image: none;
+  list-style-type: disc;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.84);
+  padding-left: 0px;
+  margin-top: 10px;
+  line-height: 32px;
 }

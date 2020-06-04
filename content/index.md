@@ -1,7 +1,7 @@
 ---
 title: ''
 herf: ''
-date: '2020-05-30'
+date: '2020-06-04'
 
 siteTitle: 'zangbianxuegu'
 description: ''
@@ -10,8 +10,8 @@ stylesheets:
   - 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css'
   - 'static/css/common.css'
 topLinks:
-  - text: 'Blog'
-    href: '/blog'
+  - text: 'Home'
+    href: 'https://zangbianxuegu.github.io/'
   - text: 'Github'
     href: 'https://github.com/zangbianxuegu/'
   - text: 'Twitter'

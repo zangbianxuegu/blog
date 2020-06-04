@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   position: relative;
   min-height: 100vh;
-  color: #111;
+  color: #333;
   font: 18px Helvetica, Arial, sans-serif;
   line-height: 1.62;
 }
@@ -18,7 +18,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(https://img1.doubanio.com/view/photo/raw/public/p2448585957.jpg);
+  background-image: url(https://raw.githubusercontent.com/zangbianxuegu/blog/master/static/assets/images/header-bg.jpg);
 }
 .content {
   max-width: 750px;
@@ -48,7 +48,7 @@ h3 {
 h4 {
   font-size: 1.1em;
 }
-p {
+.content p {
   margin: 0 0 20px 0;
   line-height: 1.8;
   font-size: 1em;
@@ -57,11 +57,16 @@ p {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
-a {
+.content a {
+  padding: 2px 1px;
+  color: rgba(0, 179, 136, 0.8);
   text-decoration: none;
-  color: #5e58ae;
-  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 179, 136, 0.8);
   touch-action: manipulation;
+}
+.content a:hover {
+  color: rgba(0, 179, 136, 1);
+  border-bottom-color: rgba(0, 179, 136, 1);
 }
 pre {
   font-size: 1em;

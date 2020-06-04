@@ -8,7 +8,9 @@ paths:
 
 ## 语句
 
-wiki 中语句（计算机科学）：[https://en.wikipedia.org/wiki/Statement\_(computer_science)](<https://en.wikipedia.org/wiki/Statement_(computer_science)>)
+**wiki 语句**
+
+语句（计算机科学）：[https://en.wikipedia.org/wiki/Statement\_(computer_science)](<https://en.wikipedia.org/wiki/Statement_(computer_science)>)
 ​
 语句是命令式编程语言的一个语法单元，表示程序要执行的操作。程序是有一个或多个语句序列，语句可能包含内部组件（例如表达式）。
 
@@ -22,11 +24,13 @@ wiki 中语句（计算机科学）：[https://en.wikipedia.org/wiki/Statement\_
 
 ## 表达式
 
-wiki 表达式（数学）：[https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%A4%BA%E5%BC%8F](https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%A4%BA%E5%BC%8F)
+**wiki 表达式**
+
+表达式（数学）：[https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%A4%BA%E5%BC%8F](https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%A4%BA%E5%BC%8F)
 ​
 表示式亦称表达式、运算式或数学表达式，在数学领域中是一些符号依据上下文的规则，有限而定义良好的组合。数学符号可用于标定数字（常量）、变量、操作、函数、括号、标点符号和分组，帮助确定操作顺序以及有其它考量的逻辑语法。
 
-范例：
+**范例：**
 
 表达式的使用范围从简单的如下列各例：
 
@@ -36,7 +40,9 @@ wiki 表达式（数学）：[https://zh.wikipedia.org/wiki/%E8%A1%A8%E7%A4%BA%E
 
 > \*4)x+,/y.
 
-wiki 中表达式（计算机科学）：[https://en.wikipedia.org/wiki/Expression\_(computer_science)](<https://en.wikipedia.org/wiki/Expression_(computer_science)>)
+**wiki 表达式**
+
+表达式（计算机科学）：[https://en.wikipedia.org/wiki/Expression\_(computer_science)](<https://en.wikipedia.org/wiki/Expression_(computer_science)>)
 ​
 表达式是一个或多个常量、变量、运算符和函数的组合，编程语言根据其特定的优先级和关联规则解释它们，并计算它们来生成另外一个值。这个过程，在数学表达式中被称为求值。
 
@@ -44,15 +50,11 @@ wiki 中表达式（计算机科学）：[https://en.wikipedia.org/wiki/Expressi
 
 关于语句和表达式的区别，说成是表达式有值而语句不总有没错，但是我也认为以下这种理解很好：
 
-- 在编程概念中，表达式和语句分别是什么概念？ - 唐朝稻草人的回答 - 知乎
-- 在编程概念中，表达式和语句分别是什么概念？
-  ​
+[在编程概念中，表达式和语句分别是什么概念？ - 唐朝稻草人的回答 - 知乎](https://www.zhihu.com/question/20750344/answer/487107831)
 
 ## JavaScript 中的语句与表达式
 
-参考：
-
-[Expressions versus statements in JavaScript](https://2ality.com/2012/09/expressions-vs-statements.html)
+参考：[Expressions versus statements in JavaScript](https://2ality.com/2012/09/expressions-vs-statements.html)
 ​
 表达式产生一个值，可以写在任何需要一个值的地方。而语句是一个行为，例如循环和条件语句，一个程序基本上就是一个语句序列。任何需要语句的地方，也可以写表达式，这样的语句是**表达式语句**。反过来却不行：你不能在需要表达式的时候使用语句，例如一个 if 语句不能作为函数的参数。
 
@@ -104,7 +106,7 @@ b
 
 ### 看似语句的表达式
 
-## 对象字面量和语句块
+#### 对象字面量和语句块
 
 下面是一个对象字面量，可以生成一个对象的表达式
 
@@ -133,7 +135,7 @@ function test(printTwo) {
 }
 ```
 
-### 函数表达式和函数声明
+#### 函数表达式和函数声明
 
 以下是函数表达式：
 
@@ -149,78 +151,15 @@ function foo() {}
 
 命名函数表达式和函数声明没有什么区别。但是它们的效果是不同的：一个函数表达式产生一个值（这个函数），而一个函数声明导致一个行为——创建一个变量，它的值是这个函数。**此外，一个函数表达式可以立即执行，函数声明不行。**
 
-#### 解释
+###### 解释
 
 `function foo () {}`，是函数声明，不能执行 `function foo () {} ()`。`let foo = function () {}`，函数表达式 `function () {}` 也即是 `foo`，可以执行 `foo()`。
 
-#### 使用对象字面量和函数表达式作为语句
-
-我们已经看到，一些表达式和语句是无法区分的，相同的代码作用不同，这取决于它出现在表达式上下文会还是语句上下文中。通常这两个上下文是明显分开的。但是，对于表达式语句，会有重叠：在这里，表达式出现在语句上下文中。为了避免歧义，JavaScript 语法禁止表达式语句以花括号或关键字 function 开头。
-
-但是，如果你想写一个以 `{` 或 `functon` 开头的表达式语句呢？ **你可以将它放在圆括号中，这样不会改变它的结果，而且可以确保它出现在表达式（expression-only）上下文中**。看两个例子：`eval` 和立即执行函数表达式（`IIFE`）。
-
-#### eval
-
-eval 在语句上下文中解析它的参数。如果你想让 eval 返回一个对象，可以给对象字面量加上圆括号：
-
-```javascript
-eval('{ foo: 123 }')
-123
-eval('({ foo: 123 })')
-{
-  foo: 123
-}
-```
-
-#### 立即执行函数表达式（IIFEs）
-
-以下是一个立即执行函数表达式：
-
-```javascript
-;(function () {
-  return 'abc'
-})()
-;('abc')
-```
-
-如果省略括号，就会出现语法错误（函数声明不能是匿名的）：
-
-```javascript
-function () { return "abc" }()
-VM6752:1 Uncaught SyntaxError: Function statements require a function name
-```
-
-如果加上名字，仍然报错（函数声明不能立即执行）：
-
-```javascript
-function foo() { return "abc" }()
-VM6757:1 Uncaught SyntaxError: Unexpected token )
-```
-
-另一个确保表达式在表达式上下文中被解析的方式是使用一元运算符，如 `+` 或 `!`。但是和圆括号相反，这些运算符会改变表达式结果。如果不需要也 OK。
-
-```javascript
-+function () { console.log("hello") }()
-VM6762:1 hello
-NaN
-```
-
-所以，IIFEs 的原理是：函数本不能作为表达式出现（指值 `function () {}`，而不是表达式 `let foo = function () {}`），但是要立即执行函数，可以将其转为表达式，圆括号将其变为表达式。
-
-#### 连接 IIFEs
-
-连接 IIFEs，不要忘记分号：
-
-```javascript
-;(function () {})()((function () {})())
-// TypeError: undefined is not a function
-```
-
-### 函数声明和函数表达式
+### 函数表达式和函数声明
 
 #### 函数声明
 
-https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
 ​
 **函数声明**定义一个具有指定参数的函数。
 
@@ -264,7 +203,7 @@ var notHoisted = function () {
 
 #### 函数表达式
 
-https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function)
 ​
 语法：
 
@@ -317,6 +256,69 @@ button.addEventListener('click', function (event) {
 ```
 
 函数声明就是语句，`function foo () {}`，而函数表达式，`function () {}`，本身是一个值，所以在回调中无法使用函数声明。
+
+### 使用对象字面量和函数表达式作为语句
+
+我们已经看到，一些表达式和语句是无法区分的，相同的代码作用不同，这取决于它出现在表达式上下文会还是语句上下文中。通常这两个上下文是明显分开的。但是，对于表达式语句，会有重叠：在这里，表达式出现在语句上下文中。为了避免歧义，JavaScript 语法禁止表达式语句以花括号或关键字 function 开头。
+
+但是，如果你想写一个以 `{` 或 `functon` 开头的表达式语句呢？ **你可以将它放在圆括号中，这样不会改变它的结果，而且可以确保它出现在表达式（expression-only）上下文中**。看两个例子：`eval` 和立即执行函数表达式（`IIFE`）。
+
+#### eval
+
+eval 在语句上下文中解析它的参数。如果你想让 eval 返回一个对象，可以给对象字面量加上圆括号：
+
+```javascript
+eval('{ foo: 123 }')
+123
+eval('({ foo: 123 })')
+{
+  foo: 123
+}
+```
+
+#### 立即执行函数表达式（IIFEs）
+
+以下是一个立即执行函数表达式：
+
+```javascript
+;(function () {
+  return 'abc'
+})()
+// 'abc'
+```
+
+如果省略括号，就会出现语法错误（函数声明不能是匿名的）：
+
+```javascript
+function () { return "abc" }()
+VM6752:1 Uncaught SyntaxError: Function statements require a function name
+```
+
+如果加上名字，仍然报错（函数声明不能立即执行）：
+
+```javascript
+function foo() { return "abc" }()
+VM6757:1 Uncaught SyntaxError: Unexpected token )
+```
+
+另一个确保表达式在表达式上下文中被解析的方式是使用一元运算符，如 `+` 或 `!`。但是和圆括号相反，这些运算符会改变表达式结果。如果不需要也 OK。
+
+```javascript
++function () { console.log("hello") }()
+VM6762:1 hello
+NaN
+```
+
+所以，IIFEs 的原理是：函数本不能作为表达式出现（指值 `function () {}`，而不是表达式 `let foo = function () {}`），但是要立即执行函数，可以将其转为表达式，圆括号将其变为表达式。
+
+#### 连接 IIFEs
+
+连接 IIFEs，不要忘记分号：
+
+```javascript
+;(function () {})()((function () {})())
+// TypeError: undefined is not a function
+```
 
 ## 参考
 
